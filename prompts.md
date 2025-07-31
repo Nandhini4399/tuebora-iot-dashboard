@@ -1,6 +1,4 @@
-#COPILOT
-
-# Create figma
+# CHATGPT
 
 ## Create a figma design for the below requirement with proper styling and as responsive UI (web, mobile, etc.)
 
@@ -36,6 +34,8 @@ OUTPUT:
     It provided .fig file
 
 ![IOT Dashboard](./assets/IoT%20Device%20Monitoring%20Dashboard.png)
+
+## I have created DeviceGrid as parent component which calls StatusScale, SearchBar, Pagination, DeviceTable components to render the code similar to the figma design.
 
 ---
 
@@ -773,7 +773,7 @@ Toggling the language switcher and verifying the title changes
 Paginating to the next page and checking the active page
 Interacting with the sort dropdown or button
 
-OUPUT:
+OUTPUT:
 
     Cypress E2E test cases have been added
     You can now run these tests to verify your app's main user flows. Let me know if you want to cover more scenarios!
