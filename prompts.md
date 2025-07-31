@@ -2,7 +2,6 @@
 
 # Create figma
 
-```markdown
 ## Create a figma design for the below requirement with proper styling and as responsive UI (web, mobile, etc.)
 
 1. **DeviceGrid Component**
