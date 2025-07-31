@@ -1,10 +1,9 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import DeviceGrid from '../src/components/devicegrid/DeviceGrid';
 import { I18nextProvider } from 'react-i18next';
-import i18n from '../src/translations/i18n'; // Adjust path if needed
+import i18n from '../src/translations/i18n';
 import '@testing-library/jest-dom';
 
-// Helper to render the component with i18n context
 const renderWithProviders = () =>
   render(
     <I18nextProvider i18n={i18n}>
@@ -37,14 +36,14 @@ describe('DeviceGrid Component', () => {
     const dropdowns = screen.getAllByRole('combobox');
 
     expect(searchInput).toBeInTheDocument();
-    expect(dropdowns.length).toBeGreaterThan(1); // Language + Sort
+    expect(dropdowns.length).toBeGreaterThan(1);
   });
 
   test('renders device table with device rows', async () => {
     renderWithProviders();
 
     const rows = await screen.findAllByRole('row');
-    expect(rows.length).toBeGreaterThan(1); // Includes table header
+    expect(rows.length).toBeGreaterThan(1); 
   });
 
   test('renders pagination navigation', () => {
@@ -73,14 +72,14 @@ describe('DeviceGrid Component', () => {
     fireEvent.change(input, { target: { value: 'Sensor A' } });
 
     const rows = await screen.findAllByRole('row');
-    expect(rows.length).toBeGreaterThan(1); // Filtered result + header
+    expect(rows.length).toBeGreaterThan(1); 
   });
 
   test('sorts devices when dropdown option selected', async () => {
     renderWithProviders();
 
     const dropdowns = screen.getAllByRole('combobox');
-    const sortDropdown = dropdowns[1]; // Assuming second dropdown is for sort
+    const sortDropdown = dropdowns[1];
 
     fireEvent.change(sortDropdown, { target: { value: 'deviceName' } });
 

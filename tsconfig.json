@@ -25,5 +25,11 @@
 
     "types": ["jest", "@testing-library/jest-dom"]
   },
-  "include": ["src", "src/App.tsx", "src/types"]
+  "include": [
+    "src",
+    "src/App.tsx",
+    "src/types",
+    "cypress/support/component.ts",
+    "src/components/devicegrid/*.cy.tsx"
+  ]
 }
