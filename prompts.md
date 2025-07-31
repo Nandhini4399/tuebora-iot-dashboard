@@ -699,11 +699,8 @@ test('pagination button click updates page', () => {
     expect(mockSetPage).toHaveBeenCalledWith(3);
 });
 ```
-```
-
 
 I have added more scnarios to test the component flow in DeviceGrid.test.tsx like testing rendering of search bar, dropdown for displaying sort options, pagination
-
 
 
 ### COPILOT

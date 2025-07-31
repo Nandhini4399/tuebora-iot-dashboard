@@ -49,3 +49,11 @@ npm run test
 ```bash
 npx cypress open
 ```
+
+FINAL OUTPUT:
+
+Web view:
+
+![IOT Dashboard in web View](./assets/web-output.png)
+
+![IOT Dashboard in mobile View](./assets/mobile-output.png)
