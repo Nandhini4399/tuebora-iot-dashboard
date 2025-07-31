@@ -1,0 +1,65 @@
+.deviceTableWrapper {
+  width: 100%;
+}
+
+.desktopView {
+  width: 100%;
+  display: block;
+  overflow-x: auto;
+}
+
+.mobileView {
+  display: none;
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+}
+
+thead {
+  background-color: #f0f0f0;
+}
+
+th,
+td {
+  padding: 12px;
+  border: 1px solid #ccc;
+  text-align: left;
+  white-space: nowrap; /* Helps maintain alignment */
+}
+
+th button {
+  background: none;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.mobileView {
+  display: none;
+}
+
+.deviceCard {
+  background-color: #f9f9f9;
+  padding: 12px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+  border-radius: 6px;
+}
+
+@media screen and (max-width: 768px) {
+  .desktopView {
+    display: none;
+  }
+
+  .mobileView {
+    display: block;
+  }
+}
+
