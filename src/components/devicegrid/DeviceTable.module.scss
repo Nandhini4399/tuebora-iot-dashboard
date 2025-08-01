@@ -12,7 +12,6 @@
   display: none;
 }
 
-/* Table styles */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -28,7 +27,7 @@ td {
   padding: 12px;
   border: 1px solid #ccc;
   text-align: left;
-  white-space: nowrap; /* Helps maintain alignment */
+  white-space: nowrap;
 }
 
 th button {

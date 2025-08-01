@@ -700,7 +700,7 @@ test('pagination button click updates page', () => {
 });
 ```
 
-I have added more scnarios to test the component flow in DeviceGrid.test.tsx like testing rendering of search bar, dropdown for displaying sort options, pagination
+I have added more scenarios to test the component flow in DeviceGrid.test.tsx like testing rendering of search bar, dropdown for displaying sort options, pagination
 
 
 ### COPILOT
@@ -725,35 +725,35 @@ There are two cypress.config files because of which cypress virtual environment 
 
 OUTPUT:
 
-    Your Cypress error is likely due to Cypress expecting a Webpack config in a specific format or location, or a mismatch between ESM/CommonJS. Here’s how to resolve it:
+Your Cypress error is likely due to Cypress expecting a Webpack config in a specific format or location, or a mismatch between ESM/CommonJS. Here’s how to resolve it:
 
-    1. Use the .cjs Webpack config
-    Cypress (and most Node tools) expect a CommonJS config. You already have webpack.config.cjs. Make sure Cypress is pointed to this file.
+1. Use the .cjs Webpack config
+Cypress (and most Node tools) expect a CommonJS config. You already have webpack.config.cjs. Make sure Cypress is pointed to this file.
 
-    2. Cypress Component Testing (if used)
-    If you are using Cypress component testing, you may need a cypress/webpack.config.js or similar, or you must specify the config in your cypress.config.js file.
+2. Cypress Component Testing (if used)
+If you are using Cypress component testing, you may need a cypress/webpack.config.js or similar, or you must specify the config in your cypress.config.js file.
 
-    3. Cypress config file format
-    If you have a cypress.config.js (or .ts), ensure it is valid and does not import ESM modules with require. If you use ESM, use import/export and name the file .mjs or set "type": "module" in package.json.
+3. Cypress config file format
+If you have a cypress.config.js (or .ts), ensure it is valid and does not import ESM modules with require. If you use ESM, use import/export and name the file .mjs or set "type": "module" in package.json.
 
-    Solution Steps
-    A. If you only use E2E Cypress (not component testing):
-    No extra Webpack config is needed. Cypress will just run your app at baseUrl.
+Solution Steps
+A. If you only use E2E Cypress (not component testing):
+No extra Webpack config is needed. Cypress will just run your app at baseUrl.
 
-    B. If you use Cypress Component Testing:
-    Create a Cypress-specific Webpack config:
+B. If you use Cypress Component Testing:
+Create a Cypress-specific Webpack config:
 
-    Copy your webpack.config.cjs to cypress/webpack.config.cjs if needed.
-    Update your cypress.config.js to use the correct config:
+Copy your webpack.config.cjs to cypress/webpack.config.cjs if needed.
+Update your cypress.config.js to use the correct config:
 
-    If you have a cypress.config.js, ensure it uses require for CommonJS, or rename to .cjs.
-    Example for cypress.config.cjs:
+If you have a cypress.config.js, ensure it uses require for CommonJS, or rename to .cjs.
+Example for cypress.config.cjs:
 
-    What you should do next
-    If you have a cypress.config.js, rename it to cypress.config.cjs and use CommonJS syntax.
-    Make sure any Webpack config Cypress uses is also .cjs and uses require.
-    If you only use E2E, you can remove any Cypress Webpack config references.
-    Would you like me to create or update your Cypress config file for you? If so, let me know if you use Cypress component testing or only E2E.
+What you should do next
+If you have a cypress.config.js, rename it to cypress.config.cjs and use CommonJS syntax.
+Make sure any Webpack config Cypress uses is also .cjs and uses require.
+If you only use E2E, you can remove any Cypress Webpack config references.
+Would you like me to create or update your Cypress config file for you? If so, let me know if you use Cypress component testing or only E2E.
 
 
 ## Internal server error: Failed to resolve import "./src/icons/en.svg" from "src/components/devicegrid/LanguageSwitcher.tsx". Does the file exist?
@@ -775,5 +775,5 @@ Interacting with the sort dropdown or button
 
 OUTPUT:
 
-    Cypress E2E test cases have been added
-    You can now run these tests to verify your app's main user flows. Let me know if you want to cover more scenarios!
+    1. Cypress E2E test cases have been added
+    2. You can now run these tests to verify your app's main user flows. Let me know if you want to cover more scenarios!

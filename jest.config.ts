@@ -10,7 +10,6 @@ const config: Config = {
   },
   moduleNameMapper: {
     '\\.module\\.(css|scss)$': '<rootDir>/tests/__mocks__/styleMock.ts',
-    // '\\.(css|scss)$': '<rootDir>/tests/__mocks__/styleMock.js' // optional: if using global styles
   },
 };
 
