@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "webpack --config webpack.config.cjs",
     "preview": "vite preview",
-    "test": "jest --watchAll",
+    "test": "jest",
     "test:ci": "jest --ci --coverage",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
@@ -31,7 +31,9 @@
     "ts-loader": "^9.5.2",
     "ts-node": "^10.9.2",
     "typescript": "~5.8.3",
-    "vite": "^7.0.4"
+    "vite": "^7.0.4",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.2"
   },
   "dependencies": {
     "i18next": "^25.3.2",

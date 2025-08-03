@@ -1,7 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import StatusScale from '../statusscale/StatusScale';
 import {
-  iotDevices,
   ITEMS_PER_PAGE,
   type DeviceData,
 } from '../../utils/DeviceData';
@@ -13,18 +12,25 @@ import styles from './DeviceGrid.module.scss';
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from './LanguageSwitcher';
 import DropdownSelect from './DropdownSelect';
+import { fetchDeviceData } from '../../utils/DeviceApi';
 
 const DeviceGrid = () => {
   const [filteredDevices, setFilteredDevices] = useState<DeviceData[]>([]);
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [sortValue, setSortValue] = useState('');
+  const [devices, setDevices] = useState<DeviceData[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   const { t } = useTranslation();
 
-  const devices = iotDevices;
-
   useEffect(() => {
-    setFilteredDevices(sortDevice(iotDevices, 'deviceName', 'asc'));
+    fetchDeviceData()
+      .then((data) => { 
+        setFilteredDevices(sortDevice(data as DeviceData[], 'deviceName', 'asc'));
+        setDevices(data as DeviceData[]);
+        setIsLoading(false);
+      })
+      .catch((err) => console.log(err));
   }, []);
 
   useEffect(() => {
@@ -52,8 +58,7 @@ const DeviceGrid = () => {
     setCurrentPage(page);
   };
 
-  return (
-    <div className={styles.deviceGrid}>
+  return  isLoading ? <div>Loading....</div> : <div className={styles.deviceGrid}>
       <header className={styles.header}>
         <h2>{t('title')}</h2>
         <LanguageSwitcher />
@@ -79,7 +84,7 @@ const DeviceGrid = () => {
         />
       </nav>
     </div>
-  );
+    
 };
 
 export default DeviceGrid;

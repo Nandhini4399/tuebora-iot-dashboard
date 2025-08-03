@@ -10,7 +10,8 @@ const config: Config = {
   },
   moduleNameMapper: {
     '\\.module\\.(css|scss)$': '<rootDir>/tests/__mocks__/styleMock.ts',
-  },
+      '\\.svg\\?url$': '<rootDir>/tests/__mocks__/fileMock.ts'
+  }
 };
 
 export default config;

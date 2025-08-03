@@ -3,6 +3,7 @@ export type DeviceData = {
     location: string;
     status: string;
     lastSeen: string;
+    id?: string;
 }
 
 export interface SortOption {
@@ -11,7 +12,7 @@ export interface SortOption {
   type: string;
 }
 
-export const ITEMS_PER_PAGE = 5;
+export const ITEMS_PER_PAGE = 10;
 
 export const sortOptions: SortOption[] = [
   { label: "Name (A–Z)", value: "deviceName_asc", type: "asc" },

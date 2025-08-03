@@ -17,13 +17,15 @@
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
-    "types": ["jest", "@testing-library/jest-dom"]
+    "types": ["jest", "@testing-library/jest-dom", "node"]
   },
   "include": [
     "src",
-    "src/App.tsx",
-    "src/types",
+    "tests",                     // ✅ for unit tests
+    "cypress/**/*.ts",          // ✅ for Cypress files only
     "cypress/support/component.ts",
-    "src/components/devicegrid/*.cy.tsx"
+    "src/components/devicegrid/*.cy.tsx",
+    "src/App.tsx",
+    "src/types"
   ]
 }

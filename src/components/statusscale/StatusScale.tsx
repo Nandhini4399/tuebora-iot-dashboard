@@ -8,6 +8,7 @@ type StatusScaleBarProps = {
 };
 
 const StatusScaleBar: React.FC<StatusScaleBarProps> = ({ devices }) => {
+  console.log(devices)
   const total = devices.length;
 
   const grouped: Record<"Online" | "Offline" | "Error", DeviceData[]> = {
@@ -91,4 +92,4 @@ const Legend = ({ color, label }: { color: string; label: string }) => (
   </div>
 );
 
-export default StatusScaleBar;
+export default React.memo(StatusScaleBar);
